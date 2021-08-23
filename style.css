@@ -1,17 +1,20 @@
 /* full screen bg setting */
-.jumbotron1 { background:url(IMG_bg.JPG) center no-repeat;
+.jumbotron1 { background:url(good_morning.JPG) center no-repeat;
               background-position: 0px 65% ; /*height:px width:% */
               background-size: cover;/*full cover img*/
               height: 550px;/*bg size heighe*/
               width: 100%;} /*bg size width*/
+.jumbotron2 { background:url(bg_project.jpeg) center no-repeat;
+              background-position: 0px 65% ; /*height:px width:% */
+              background-size: cover;/*full cover img*/
+              height: auto;/*bg size heighe*/
+              width: 100%;} /*bg size width*/
 
 /* My CSS */
+.header_color { background-color: rgba(255,255,255,0);} /*None color*/
 .retro { font-family: 'VT323', monospace;}
 .top_gb_height { width: 100%; height: 85vh;}
-.about_me_height { width: 100%; height: auto;}
 .mybg_color_gradient1 { background:linear-gradient(90deg, #FE089B, #14EFFF);}
-.mybg_color_gradient2 { background:linear-gradient(120deg, dimgray, white);}
-.mybg_color_darkgray { background-color: dimgray;}
 .github_color { color: gray;}
 .facebook_color {color: dodgerblue;}
 .instagram_color {display: inline-block;
