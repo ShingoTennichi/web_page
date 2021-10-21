@@ -64,7 +64,7 @@ const reviews = [
     {
         id : 1,
         title : "Manga and Drawing",
-        img : "images/IMG_2.JPG",
+        img : "images/IMG_2.jpg",
         text : "One of the best part of japanese culture is Manga. They give me energy and encourage me to tyr new experience that I was afraid of such as programming, study abroad to learn English and communicate with people who I meet first time. Also drawing is really interesting because I just have fun to draw a character, I can draw well, but I can't draw well when I try to improve drawing well. It tells me just have fun makes me better.",
     },
     {
