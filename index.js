@@ -60,11 +60,11 @@
 
 
 // * I like... =================================================================
-const reviews = [
+const introduce = [
     {
         id : 1,
         title : "Manga and Drawing",
-        img : "images/IMG_2.JPG",
+        img : "images/IMG_2.jpg",
         text : "One of the best part of japanese culture is Manga. They give me energy and encourage me to tyr new experience that I was afraid of such as programming, study abroad to learn English and communicate with people who I meet first time. Also drawing is really interesting because I just have fun to draw a character, I can draw well, but I can't draw well when I try to improve drawing well. It tells me just have fun makes me better.",
     },
     {
@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function show_person() {
-    const item = reviews[currentItem];
+    const item = introduce[currentItem];
     img.src = item.img;
     info.textContent = item.text;
     text.textContent = item.title;
@@ -103,7 +103,7 @@ function show_person() {
 
 nextBtn.addEventListener('click', function() {
     currentItem += 1;
-    if(currentItem > reviews.length - 1) {
+    if(currentItem > introduce.length - 1) {
         currentItem = 0;
     }
     show_person();
@@ -112,13 +112,7 @@ nextBtn.addEventListener('click', function() {
 prevBtn.addEventListener('click', function() {
     currentItem -= 1;
     if(currentItem < 0) {
-        currentItem = reviews.length - 1;
+        currentItem = introduce.length - 1;
     }
     show_person();
 });
-
-randomBtn.addEventListener('click', function() {
-    currentItem = Math.floor(Math.random() * reviews.length);
-    show_person();
-})
-
