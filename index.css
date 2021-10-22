@@ -152,7 +152,7 @@ textarea {
     width: 100%;
     height: 700px;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.8;
     z-index: -999;
 }
 
@@ -364,7 +364,7 @@ textarea {
         flex-wrap: wrap;
     }
     .block-1 {
-        height: 700px;
+        height: 450px;
     }
 
     .block-1 .video-size {
@@ -372,9 +372,9 @@ textarea {
         top: 0;
         left: 0;
         width: 100%;
-        height: 700px;
+        height: 450px;
         object-fit: cover;
-        opacity: 0.4;
+        opacity: 0.8;
         z-index: -999;
     }
 
