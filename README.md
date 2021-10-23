@@ -1,1 +1,1 @@
-# https://shingotennichi.github.io/myweb_page/
+# https://shingotennichi.github.io/web_page/
