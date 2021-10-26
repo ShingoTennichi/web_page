@@ -1,0 +1,114 @@
+:root {
+    /* *favorite colors* */
+    /* *  --Name  * */
+    /* * You can assign favorite name that is just like variable in programming language * */
+    /* * The only rule is that start with -- * */
+
+    /* *=================== colors ==========================* */
+    --clr-none : rgba(255,255,255,0.0);
+    --clr-dark-cover : rgba(0,0,0,0.7);
+    --clr-white : #ffffff;
+    --clr-shadow : 4px 4px #000; /*! use with --> text-shadow: var(--clr-shadow)*/
+    /* *=================== box-shadow ======================* */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    /* *=================== toggle action ===================* */
+    --transition: all 0.3s linear;
+    /* *=================== grid ============================* */
+
+    /* *=================== others ==========================* */
+    --spacing: 0.1rem;
+}
+
+.Nav-container {
+    position: fixed;
+    padding: 0 15px 0 10px;
+    width: 100%;
+    height: 80px;
+    background: var(--clr-none);
+}
+
+.logo{
+    float: left;
+    padding: 10px;
+}
+
+.logo img{
+    height: 70px;
+}
+
+.toggle-menu{
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.toggle-menu a{
+    margin: 0 0 0 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.toggle-menu a:hover{
+    background: #fff;
+    color: #333;
+    transform: scale(1.1);
+}
+
+.toggle-menu i{
+    margin: 0 8px 0 0;
+    font-size: 16px;
+}
+
+.toggle-button{
+    float: right;
+    height: 80px;
+    line-height: 80px !important;
+    color: #fff;
+    font-size: 30px;
+    display: none !important;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:750px) {
+    .toggle-button{
+        display: block !important;
+    }
+
+    .toggle-menu{
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        background: var(--clr-dark-cover);
+        top: 80px;
+        right: 0;
+        display: none;
+        padding: 20px 40px;
+        margin: 0 10px 0 0;
+        box-sizing: border-box;
+    }
+
+    .toggle-menu::before{
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--clr-dark-cover);
+        position: absolute;
+        top: -10px;
+        right: 5px;
+    }
+
+    .toggle-menu a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .toggle-menu.active{
+        display: block;
+    }
+}

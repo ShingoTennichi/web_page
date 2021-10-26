@@ -1,7 +1,20 @@
-const toggle = document.querySelector('.toggle');
-const items = document.querySelector('.Nav-items-container');
+//  *================ Navbar switch ==================== * //
+$('.toggle-button').click(function() {
+    $(this).toggleClass('fa-times');
+    $('.toggle-menu').toggleClass('active');
+});
+$(window).scroll(function() {
+    $('toggle-menu').removeClass('active');
+});
 
-toggle.addEventListener('click', function() {
-        items.classList.toggle('toggle-visible');
-    }
-);
+
+var prev = 0;
+var $window = $(window);
+var nav = $('.nav');
+console.log($window)
+
+// $window.on('scroll', function(){
+//     var scrollTop = $window.scrollTop();
+//     nav.toggleClass('hidden', scrollTop > prev);
+//     prev = scrollTop;
+// });

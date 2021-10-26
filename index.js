@@ -116,3 +116,4 @@ prevBtn.addEventListener('click', function() {
     }
     show_person();
 });
+
