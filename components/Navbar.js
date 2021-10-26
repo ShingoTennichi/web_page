@@ -8,10 +8,10 @@ $(window).scroll(function() {
 });
 
 
-var prev = 0;
-var $window = $(window);
-var nav = $('.nav');
-console.log($window)
+// var prev = 0;
+// var $window = $(window);
+// var nav = $('.nav');
+// console.log($window)
 
 // $window.on('scroll', function(){
 //     var scrollTop = $window.scrollTop();
