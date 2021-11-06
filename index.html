@@ -148,28 +148,27 @@
             <div class="flexbox-items flexbox-item">
                 <div class="flexbox-items flexbox-content">
                     <h1>If you get an interest in my website, please contact me!</h1>
-                    <p style="color: red;">※Sorry, not working now. I'll fix it as soon as possible.</p>
                 </div>
                 <div class="flexbox-items form-wrap">
-                    <form class="flexbox-items flexbox-content">
+                    <div class="flexbox-items flexbox-content">
                         <label for="Name">Name</label>
-                        <input id="name" type="text" name="name" placeholder="Name">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="E-mail">
-                        <label for="Type of message">Type of message</label>
-                        <select id="Type_of_message" name="Type of message" onchange="changeColor(this)">
+                        <input id="Name" type="text" name="name" placeholder="Name">
+                        <label for="Email">E-mail</label>
+                        <input id="Email" type="email" name="email" placeholder="E-mail">
+                        <label for="TypeOfMessage">Type of message</label>
+                        <select id="TypeOfMessage" name="Type of message">
                             <option hidden>Choose your type</option>
-                            <option value="offer">Offer to build a website or a job</option>
-                            <option value="comment">Comment about my website</option>
-                            <option value="question">Question about me</option>
-                            <option value="other">Other</option>
+                            <option value="Offer">Offer to build a website or a job</option>
+                            <option value="Comment">Comment about my website</option>
+                            <option value="Question">Question about me</option>
+                            <option value="Other">Other</option>
                         </select>
-                        <label for="textarea">Message</label>
-                        <textarea id="textarea" name="textarea" placeholder="Your message here" rows="4" cols="40"></textarea>
+                        <label for="textEntry">Message</label>
+                        <textarea id="textEntry" name="textarea" placeholder="Your message here" rows="4" cols="40" value=""></textarea>
                         <div class="send-button">
-                            <button class="send">send</button>
+                            <button id="Send" class="send">send</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,13 +182,14 @@
             </div>
         </div>
         <div class="flexbox-items flexbox-item-2">
-
         </div>
     </footer>
 
     <!-- Javascript -->
     <script src="index.js"></script>
     <script src="components/Navbar.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1020.0.min.js"></script>
+    <script src="components/SNSPublishToTopic.js"></script>
 
     <!-- JSON Glottologist
     <script src="https://unpkg.com/glottologist"></script> -->
