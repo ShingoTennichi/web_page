@@ -125,6 +125,10 @@ textarea {
     flex-grow: 1;
 }
 
+.active {
+    display: block;
+}
+
 .block-1 {
     height: 700px;
 }
@@ -321,12 +325,15 @@ textarea {
 
 .block-5 .form-wrap .send-button {
     display: flex;
+    flex-direction: column;
     margin: 0 0 40px 0;
     justify-content: center;
+    align-items: center;
 }
 
 .block-5 .send {
     font-size: 1rem;
+    width: 80px;
     color: var(--clr-white);
     padding: 6px 12px;
     background-color: #cdcdcd;
@@ -339,6 +346,10 @@ textarea {
     background-color:#0090DE;
     border-color: #cdcdcd;
     transition: 0.5s;
+}
+
+.block-5 .Thanks {
+    display: none;
 }
 
 
@@ -567,6 +578,7 @@ textarea {
 
     .block-5 .send {
         font-size: 1rem;
+        width: 80px;
         color: var(--clr-white);
         margin: 0 0 40px 0;
         padding: 6px 12px;

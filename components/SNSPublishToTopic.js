@@ -9,6 +9,7 @@ const Email = document.getElementById("Email");
 const TypeOfMessage = document.getElementById("TypeOfMessage");
 const textEntry = document.getElementById("textEntry");
 const Send = document.getElementById("Send");
+const Thanks = document.getElementById("Thanks");
 
 Send.addEventListener('click',function snsTopic() {
     // Create publish parameters
@@ -25,4 +26,11 @@ Send.addEventListener('click',function snsTopic() {
     // Publish the message to topic
     const publishTextPromise = new AWS.SNS({apiVersion: '2010-03-31'});
     publishTextPromise.publish(params).promise();
+
+    Name.value = "";
+    Email.value = "";
+    TypeOfMessage.value = "";
+    textEntry.value = "";
+
+    Thanks.style.display = "block";
 })
