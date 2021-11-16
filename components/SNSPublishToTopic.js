@@ -10,6 +10,7 @@ const TypeOfMessage = document.getElementById("TypeOfMessage");
 const textEntry = document.getElementById("textEntry");
 const Send = document.getElementById("Send");
 const Thanks = document.getElementById("Thanks");
+const error = document.getElementById("error");
 
 Send.addEventListener('click',function snsTopic() {
     // Create publish parameters
@@ -20,17 +21,24 @@ Send.addEventListener('click',function snsTopic() {
             "Name: " + Name.value +
             "\nEmail: " + Email.value +
             "\nType of message: " + TypeOfMessage.value +
-            "\nMessage: " + textEntry.value
+            "\nMessage:\n " + textEntry.value
     };
 
     // Publish the message to topic
     const publishTextPromise = new AWS.SNS({apiVersion: '2010-03-31'});
-    publishTextPromise.publish(params).promise();
-
-    Name.value = "";
-    Email.value = "";
-    TypeOfMessage.value = "";
-    textEntry.value = "";
-
-    Thanks.style.display = "block";
-})
+    if(Name.value == "" || Email.value  == "" || TypeOfMessage.value  == "" || textEntry.value  == "") {
+        Thanks.style.display = "none"
+        error.style.display = "block"
+        return console.log("error")
+    } else {
+        publishTextPromise.publish(params).promise()
+        .then(() =>{
+            Name.value ="";
+            Email.value ="";
+            TypeOfMessage.value ="";
+            textEntry.value ="";
+            error.style.display = "none"
+            Thanks.style.display = "block"
+        })
+    }
+});
